@@ -61,7 +61,7 @@ function printResult(reply, userAmount, userDate, fromCurrency, base) {
     document.getElementById('total').innerHTML  = `${userAmount} ${base} är lika med <br>
     <span class="bigger">${result.toFixed(2)}</span> <br>${fromCurrency}`; 
 
-    document.querySelector('main').style.height = '600px';
+    document.querySelector('main').style.height = '610px';
     // document.querySelector('form').style.padding = '5px 20px';
 
     setTimeout(() => {
