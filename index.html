@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historiska valutor</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+        <div class="container">
+            <div class="form-container">
+                <main>
+                    <form id="form">
+                        <h1>Historiska valutor</h1>
+                            <div class="currency-box">
+                                <div class="curr">    
+                                    <label for="currency-from">Från</label>
+                                    <select name="currency-from" id="currency-pick-from">
+                                    <option value="value">Välj valuta</option>
+                                    </select>
+                                </div>
+                                <div class="curr">
+                                    <label for="currency-to">Till</label>
+                                    <select name="currency-to" id="currency-pick-to">
+                                    <option value="value">Välj valuta</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="date-box">
+                                <label for="date">Datum</label><br>
+                                <input type="date" id="date" class="">
+                            </div>
+                            <div class="amount-box">
+                                <label for="amount">Belopp att konvertera</label><br>
+                                <input type="text" id="amount">
+                            </div>
+                        <button type="submit" id="submit">Skicka</button>
+                    </form>
+                    <div class="response">
+                        <div class="response-left">
+                            <canvas id="circle" width="260" height="260"></canvas>
+                            <div class="text-response">
+                                <p id="row-1"></p>
+                                <h2 class="curr-result">7.62</h2>
+                                <p id="row-2"></p>
+                            </div>
+                        </div>
+                        <div class="response-right">
+                            <!-- <p>2022-01-01 motsvarade 232 SEK</p><br> -->
+                            <p id="total"></p>
+                        </div>
+                    </div>
+                </main>
+            </div>
+
+        </div>
+    </body>
+</html>
