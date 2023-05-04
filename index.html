@@ -6,10 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Historiska valutor</title>
     <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/4cb68bf540.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
     <body>
         <div class="container">
+            <div class="alert">
+                <span id="alert-text"></span>
+                <i class="fa-solid fa-xmark"></i>
+            </div>
             <div class="form-container">
                 <main>
                     <form id="form">
@@ -19,19 +24,34 @@
                                     <label for="currency-from">Från</label>
                                     <select name="currency-from" id="currency-pick-from">
                                     <option value="value">Välj valuta</option>
+                                    <option value="SEK">SEK - Svenska kronor</option>
+                                    <option value="NOK">NOK - Norska kronor</option>
+                                    <option value="DKK">DKK - Danska kronor</option>
+                                    <option value="USD">USD - Amerikanska dollar</option>
+                                    <option value="EUR">EUR - Euro</option>
                                     </select>
                                 </div>
+
+                                <div class="curr absolute">
+                                    <i class="fa-solid fa-right-left"></i>
+                                </div>
+
                                 <div class="curr">
                                     <label for="currency-to">Till</label>
-                                    <select name="currency-to" id="currency-pick-to">
+                                    <select name="currency-to" id="currency-pick-to" required>
                                     <option value="value">Välj valuta</option>
+                                    <option value="SEK">SEK - Svenska kronor</option>
+                                    <option value="NOK">NOK - Norska kronor</option>
+                                    <option value="DKK">DKK - Danska kronor</option>
+                                    <option value="USD">USD - Amerikanska dollar</option>
+                                    <option value="EUR">EUR - Euro</option>
                                     </select>
                                 </div>
                             </div>
 
                             <div class="date-box">
                                 <label for="date">Datum</label><br>
-                                <input type="date" id="date" class="">
+                                <input type="date" id="date" required>
                             </div>
                             <div class="amount-box">
                                 <label for="amount">Belopp att konvertera</label><br>
@@ -44,7 +64,7 @@
                             <canvas id="circle" width="260" height="260"></canvas>
                             <div class="text-response">
                                 <p id="row-1"></p>
-                                <h2 class="curr-result">7.62</h2>
+                                <h2 class="curr-result"></h2>
                                 <p id="row-2"></p>
                             </div>
                         </div>
