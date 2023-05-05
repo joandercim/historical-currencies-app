@@ -62,7 +62,7 @@ function printResult(reply, userAmount, userDate, fromCurrency, base) {
     }
     
     
-      document.querySelector('h2').textContent = `${reply.toFixed(3)}`;
+      document.querySelector('h2').textContent = `${reply.toFixed(3).replace('.', ',')}`;
       document.querySelector('h2').classList.add('visible');
       document.querySelector('h2').style.opacity = '1';
       document.getElementById('circle').style.opacity = '1';
@@ -72,7 +72,7 @@ function printResult(reply, userAmount, userDate, fromCurrency, base) {
 
 
     document.getElementById('total').innerHTML  = `${userAmount} ${base} är lika med <br>
-    <span class="bigger">${result.toFixed(2)}</span><br>${fromCurrency}`; 
+    <span class="bigger">${result.toFixed(2).replace('.', ',')}</span><br>${fromCurrency}`; 
 
     document.querySelector('main').style.height = '610px';
 
